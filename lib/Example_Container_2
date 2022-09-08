@@ -1,0 +1,49 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "Container Örneği",
+            style: TextStyle(fontSize: 25),
+          ),
+        ),
+        body: Center(
+          child: Container(
+            height: 300,
+            width: 300,
+            //color: Colors.yellow,
+            decoration: BoxDecoration(
+              color: Colors.yellow,
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: Color.fromARGB(115, 211, 12, 12),
+                width: 5.0,
+              ),
+              image: DecorationImage(
+                image: NetworkImage(
+                    "https://avatars1.githubusercontent.com/u/14101776?s=250&v=3"),
+              ),
+            ),
+            alignment: Alignment.bottomCenter,
+            padding: EdgeInsets.all(10.0),
+            margin: EdgeInsets.all(10.0),
+            child: Text(
+              "FLUTTER",
+              style: TextStyle(
+                fontSize: 23,
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
